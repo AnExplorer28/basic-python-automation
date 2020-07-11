@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Scenario>
+<Scenario RevMajor="2" RevMinor="2">
+    <Layout Database="../Runtime/Tools/RodDistro_5821_Rod4.5.7/DefaultProject/Database/Template.opt.osgb" File="../Runtime/Tools/RodDistro_5821_Rod4.5.7/DefaultProject/Odr/Template.xodr"/>
+    <VehicleList ConfigFile="Distros/Current/Config/Players/Vehicles"/>
+    <DriverList ConfigFile="Distros/Current/Config/Players/driverCfg.xml"/>
+    <CharacterList ConfigFile="Distros/Current/Config/Players/Pedestrians"/>
+    <ObjectList ConfigFile="Distros/Current/Config/Players/Objects"/>
+    <DynObjects Path="Distros/Current/Config/DynObjects/Logic"/>
+    <TrafficElements/>
+    <PulkTraffic/>
+    <TrafficControl>
+        <Player>
+            <Description Driver="DefaultDriver" Control="external" AdaptDriverToVehicleType="true" Type="MB_Sprinter_2007_red" Name="EgoVehicle"/>
+            <Init>
+                <Speed Value="1.0000000000000000e+01"/>
+                <PosPathShape/>
+                <PathShapeRef StartS="1.0000000000000000e-02" EndAction="continue" TargetS="1.0000000000000000e+03" PathShapeId="1"/>
+            </Init>
+        </Player>
+        <PlayerActions Player="EgoVehicle"/>
+    </TrafficControl>
+    <MovingObjectsControl>
+        <PathShape ShapeId="1" ShapeType="polyline" Closed="false" Name="Ego Vehicle Path">
+        </PathShape>
+    </MovingObjectsControl>
+    <LightSigns/>
+    <Selections/>
+</Scenario>
